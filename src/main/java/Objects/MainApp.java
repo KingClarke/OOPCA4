@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) throws DaoException {
         Scanner scanner = new Scanner(System.in);
-        IncomeDAO incomesDAO = new IncomeDAO();
+        IncomeDAO incomeDAO = new IncomeDAO();
         ExpenseDAO expenseDAO = new ExpenseDAO();
 
         while (true) {
