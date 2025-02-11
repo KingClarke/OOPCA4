@@ -1,7 +1,7 @@
 package Objects;
 import Exception.DaoException;
-import DAOs.ExpenseDAO;
-import DAOs.IncomeDAO;
+import DAOs.ExpensesDAO;
+import DAOs.IncomesDAO;
 import java.util.Scanner;
 
 public class MainApp {
