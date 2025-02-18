@@ -1,17 +1,18 @@
 package Objects;
 import Exception.DaoException;
-import DAOs.ExpensesDAO;
-import DAOs.IncomesDAO;
+import DAO.ExpensesDAO;
+import DAO.IncomeDAO;
 import java.util.Scanner;
 
 public class MainApp {
     public static void main(String[] args) throws DaoException {
         Scanner scanner = new Scanner(System.in);
+        ExpensesDAO expensesDAO = new ExpensesDAO();
         IncomeDAO incomeDAO = new IncomeDAO();
-        ExpenseDAO expenseDAO = new ExpenseDAO();
 
         while (true) {
-            System.out.println("\nExpense Record Menu:");
+            System.out.println("\n*****************");
+            System.out.println("Expense Record Menu:");
             System.out.println("1. List Income");
             System.out.println("2. Add Income");
             System.out.println("3. Delete Income");
@@ -29,13 +30,37 @@ public class MainApp {
                     incomeDAO.getAllIncome().forEach(System.out::println);
                     break;
                 case 2:
-                    System.out.print("Title: ");
+                    System.out.print("Name of the income: ");
                     String title = scanner.nextLine();
-                    System.out.print("Amount: ");
+                    System.out.print("Income: ");
                     double amount = scanner.nextDouble();
                     System.out.print("Date (YYYY-MM-DD): ");
                     String date = scanner.next();
                     incomeDAO.addIncome(title, amount, date);
+                    break;
+                case 3:
+                    System.out.print("ID of the income you want to delete: ");
+                    int id = scanner.nextInt();
+                    incomeDAO.deleteIncome(id);
+                    break;
+                case 4:
+                    expensesDAO.getAllExpenses().forEach(System.out::println);
+                    break;
+                case 5:
+                    System.out.print("Name of the expense: ");
+                    title = scanner.nextLine();
+                    System.out.print("Catagory: ");
+                    String catagory = scanner.nextLine();
+                    System.out.print("Expense: ");
+                    amount= scanner.nextDouble();
+                    System.out.print("Date (YYYY-MM-DD): ");
+                    date = scanner.next();
+                    expensesDAO.addExpense(title, catagory, amount, date);
+                    break;
+                case 6:
+                    System.out.print("ID of the expense you want to delete : ");
+                    id = scanner.nextInt();
+                    expensesDAO.deleteExpense(id);
                     break;
                 case 0:
                     System.exit(0);
