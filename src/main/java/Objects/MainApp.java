@@ -49,13 +49,13 @@ public class MainApp {
                 case 5:
                     System.out.print("Name of the expense: ");
                     title = scanner.nextLine();
-                    System.out.print("Catagory: ");
-                    String catagory = scanner.nextLine();
+                    System.out.print("Category: ");
+                    String category = scanner.nextLine();
                     System.out.print("Expense: ");
                     amount= scanner.nextDouble();
                     System.out.print("Date (YYYY-MM-DD): ");
                     date = scanner.next();
-                    expensesDAO.addExpense(title, catagory, amount, date);
+                    expensesDAO.addExpense(title, category, amount, date);
                     break;
                 case 6:
                     System.out.print("ID of the expense you want to delete : ");
