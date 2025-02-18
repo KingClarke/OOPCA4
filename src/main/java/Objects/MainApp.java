@@ -12,7 +12,7 @@ public class MainApp {
 
         while (true) {
             System.out.println("\n*****************");
-            System.out.println("Expense Record Menu:");
+            System.out.println("Record Management Menu:");
             System.out.println("1. List Income");
             System.out.println("2. Add Income");
             System.out.println("3. Delete Income");

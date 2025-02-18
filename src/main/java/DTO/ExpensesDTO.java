@@ -1,5 +1,4 @@
 package DTO;
-
 import java.util.Date;
 
 public class ExpensesDTO {

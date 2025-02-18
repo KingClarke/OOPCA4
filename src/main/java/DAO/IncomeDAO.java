@@ -1,5 +1,4 @@
 package DAO;
-import DAO.baseDAO;
 import DTO.IncomeDTO;
 import Exception.DaoException;
 import java.sql.*;
