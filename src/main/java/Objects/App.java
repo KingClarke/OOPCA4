@@ -4,7 +4,7 @@ import DAO.ExpensesDAO;
 import DAO.IncomeDAO;
 import java.util.Scanner;
 
-public class MainApp {
+public class App {
     public static void main(String[] args) throws DaoException {
         Scanner scanner = new Scanner(System.in);
         ExpensesDAO expensesDAO = new ExpensesDAO();
