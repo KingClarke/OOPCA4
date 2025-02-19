@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS expense_record;
-CREATE DATABASE expense_record;
-USE expense_record;
+DROP DATABASE IF EXISTS records;
+CREATE DATABASE records;
 
 DROP TABLE IF EXISTS expenses;
 CREATE TABLE expenses (

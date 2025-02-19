@@ -13,7 +13,7 @@ public class App {
         while (true) {
             System.out.println("Income : 1");
             System.out.println("Expenses : 2");
-            System.out.println("Choose an option:");
+            System.out.print("Choose an option:");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
