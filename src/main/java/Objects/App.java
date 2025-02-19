@@ -16,6 +16,7 @@ public class App {
             System.out.println("1. List Income");
             System.out.println("2. Add Income");
             System.out.println("3. Delete Income");
+            System.out.println("*****************");
             System.out.println("4. List Expenses");
             System.out.println("5. Add Expense");
             System.out.println("6. Delete Expense");
