@@ -11,6 +11,7 @@ public class App {
         IncomeDAO incomeDAO = new IncomeDAO();
 
         while (true) {
+            System.out.println("Exit : ");
             System.out.println("Income : 1");
             System.out.println("Expenses : 2");
             System.out.print("Choose an option:");
@@ -19,6 +20,8 @@ public class App {
             scanner.nextLine();
 
             switch (choice) {
+                case 0:
+                    System.exit(0);
                 case 1:
                     System.out.println("Record Management Menu:");
                     System.out.println("Show Income : 1");
@@ -29,7 +32,6 @@ public class App {
                     System.out.println("Show Expenses: 4");
                     System.out.println("Add Expense: 5");
                     System.out.println("Delete Expense: 6");
-                    System.out.println("Exit: 0");
                     break;
             }
             System.out.print("Choose an option: ");
@@ -74,8 +76,6 @@ public class App {
                     id = scanner.nextInt();
                     expensesDAO.deleteExpense(id);
                     break;
-                case 0:
-                    System.exit(0);
             }
         }
     }
