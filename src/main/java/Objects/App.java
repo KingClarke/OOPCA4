@@ -11,7 +11,7 @@ public class App {
         IncomeDAO incomeDAO = new IncomeDAO();
 
         while (true) {
-            System.out.println("Exit : ");
+            System.out.println("Exit : 0");
             System.out.println("Income : 1");
             System.out.println("Expenses : 2");
             System.out.print("Choose an option:");
