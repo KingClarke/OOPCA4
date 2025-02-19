@@ -11,19 +11,30 @@ public class App {
         IncomeDAO incomeDAO = new IncomeDAO();
 
         while (true) {
-            System.out.println("\n*****************");
-            System.out.println("Record Management Menu:");
-            System.out.println("1. List Income");
-            System.out.println("2. Add Income");
-            System.out.println("3. Delete Income");
-            System.out.println("*****************");
-            System.out.println("4. List Expenses");
-            System.out.println("5. Add Expense");
-            System.out.println("6. Delete Expense");
-            System.out.println("0. Exit");
-            System.out.print("Choose an option: ");
+            System.out.println("Income : 1");
+            System.out.println("Expenses : 2");
+            System.out.println("Choose an option:");
 
             int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Record Management Menu:");
+                    System.out.println("Show Income : 1");
+                    System.out.println("Add Income : 2");
+                    System.out.println("Delete Income : 3");
+                    break;
+                case 2:
+                    System.out.println("Show Expenses: 4");
+                    System.out.println("Add Expense: 5");
+                    System.out.println("Delete Expense: 6");
+                    System.out.println("Exit: 0");
+                    break;
+            }
+            System.out.print("Choose an option: ");
+
+            choice = scanner.nextInt();
             scanner.nextLine();
 
             switch (choice) {
